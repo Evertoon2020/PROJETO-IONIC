@@ -6,6 +6,20 @@
 
 <ion-content>
 
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of lista">
+      <ion-text>
+        <h3>{{item.nome}}</h3>
+        <p>Gênero: {{item.genero}} - {{item.idade}} anos</p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
 
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button size="small" (click)="exibeCadastro()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>
